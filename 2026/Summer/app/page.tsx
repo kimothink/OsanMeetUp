@@ -104,6 +104,10 @@ export default function Home() {
             <div><b>JUL</b><strong>25</strong><span>토요일</span></div>
             <div className="fact-text"><span>2026. 07. 25</span><strong>13:00 — 17:40</strong><span>오산청년일자리지원센터 이루잡</span></div>
           </div>
+          <figure className="hero-mascots">
+            <img src={`${basePath}/event/osan-mascots.png`} alt="오산시 캐릭터 까산이와 까오" />
+            <figcaption>오산에서 만나요!</figcaption>
+          </figure>
           <a className="primary-cta" href="#schedule">오늘의 여정 보기 <span>↓</span></a>
         </div>
         <div className="ticker" aria-hidden="true"><div>AI · DATA · CLICKHOUSE · COMFYUI · SIDE PROJECT · STARTUP · AI · DATA · CLICKHOUSE · COMFYUI · SIDE PROJECT · STARTUP ·</div></div>
@@ -121,6 +125,14 @@ export default function Home() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="attendance-section" aria-labelledby="attendance-title">
+        <div className="shell attendance-card">
+          <p>PLEASE NOTE</p>
+          <div><h2 id="attendance-title">참석이 어려우신가요?</h2><p>다른 분께 참여 기회를 드릴 수 있도록 <strong>행사 2~3일 전까지 미리 연락해 주세요.</strong></p></div>
+          <span aria-hidden="true">♥</span>
         </div>
       </section>
 
@@ -145,8 +157,14 @@ export default function Home() {
       <section className="location-section" id="location">
         <div className="shell location-card">
           <div className="location-number">03</div>
-          <div className="location-copy"><p>WHERE WE MEET</p><h2>오산청년일자리<br />지원센터 <i>이루잡</i></h2><address>경기도 오산시 운천로 62, 3층</address><a href="https://naver.me/xZVpbYbg" target="_blank" rel="noreferrer">네이버 지도에서 보기 <span>↗</span></a></div>
-          <div className="map-art" aria-hidden="true"><span className="pin">●</span><div className="road r1" /><div className="road r2" /><div className="road r3" /><b>IRUJAB</b></div>
+          <div className="location-copy">
+            <p>WHERE WE MEET</p><h2>오산청년일자리<br />지원센터 <i>이루잡</i></h2><address>경기도 오산시 운천로 62, 3층</address>
+            <div className="parking-note"><strong>주차 안내</strong><p>오산시청 주차장은 무료로 이용할 수 있습니다. 시청 주차가 어려운 경우 운암공영주차장을 유료로 이용해 주세요.</p></div>
+            <a href="https://naver.me/xZVpbYbg" target="_blank" rel="noreferrer">네이버 지도에서 보기 <span>↗</span></a>
+          </div>
+          <a className="map-image" href="https://naver.me/xZVpbYbg" target="_blank" rel="noreferrer">
+            <img src={`${basePath}/event/location-map.png`} alt="오산청년일자리지원센터 이루잡 주변 지도" /><span>지도를 눌러 크게 보기 ↗</span>
+          </a>
         </div>
       </section>
 
