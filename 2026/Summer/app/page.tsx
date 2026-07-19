@@ -161,7 +161,7 @@ export default function Home() {
 
       <section className="sponsors-section" id="sponsors">
         <div className="shell">
-          <div className="section-heading light"><p>02 · WITH US</p><h2>고마운<br /><i>파트너들</i></h2><span>함께 만들어 주신<br />일곱 팀을 소개합니다</span></div>
+          <div className="section-heading light"><p>02 · WITH US</p><h2>고마운<br /><i>파트너사분들</i></h2><span>함께 만들어 주신<br />일곱 팀을 소개합니다</span></div>
           <p className="sponsor-lead">로고를 눌러 후원사 이야기를 만나보세요.</p>
           <div className="sponsor-grid">
             {sponsors.map((sponsor) => sponsor.detail ? (
