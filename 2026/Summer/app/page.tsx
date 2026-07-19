@@ -128,7 +128,7 @@ export default function Home() {
             <div className="fact-text"><span>2026. 07. 25</span><strong>13:00 — 17:40</strong><span>오산청년일자리지원센터 이루잡</span></div>
           </div>
           <figure className="hero-mascots">
-            <img src={`${basePath}/event/osan-mascots-hanbok.png`} alt="전통 한복을 입은 오산시 캐릭터 까산이와 까오" />
+            <img src={`${basePath}/event/osan-mascots-cute.png`} alt="둥글고 귀여운 오산시 까마귀 캐릭터 까산이와 까오" />
             <figcaption>오산에서 만나요!</figcaption>
           </figure>
           <a className="primary-cta" href="#schedule">행사 일정 보기 <span>↓</span></a>
