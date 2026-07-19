@@ -24,7 +24,7 @@ button { font:inherit; }
 .nav-links a:hover { color:var(--pink-deep); }
 .hero-content { position:relative; z-index:2; padding:8vh 0 130px; }
 .eyebrow { font-size:.72rem; font-weight:900; letter-spacing:.22em; margin:0 0 18px; color:var(--pink-deep); }
-.hero h1 { font-size:clamp(5rem,14vw,11rem); line-height:.72; letter-spacing:-.095em; margin:0; font-weight:950; max-width:900px; }
+.hero h1 { font-size:clamp(5rem,14vw,11rem); line-height:.84; letter-spacing:-.095em; margin:0; font-weight:950; max-width:900px; }
 .hero h1 span { color:var(--pink-deep); }
 .hero h1 em { font-family:Georgia,serif; font-weight:400; color:var(--mint); font-size:.56em; letter-spacing:-.06em; }
 .hero-copy { font-size:clamp(1rem,2vw,1.35rem); line-height:1.55; font-weight:800; margin:42px 0 30px; }
@@ -127,7 +127,7 @@ footer a { font-weight:800; font-size:.8rem; }
   .nav { height:68px; }
   .nav-links { gap:15px; font-size:.72rem; }
   .hero-content { padding-top:8vh; }
-  .hero h1 { font-size:clamp(4.2rem,24vw,7rem); line-height:.78; }
+  .hero h1 { font-size:clamp(4.2rem,24vw,7rem); line-height:.9; }
   .hero-copy { margin-top:34px; }
   .hero-orb { opacity:.45; }
   .orb-one { width:260px; height:260px; right:-120px; top:110px; }
