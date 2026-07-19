@@ -13,9 +13,9 @@ export const metadata: Metadata = {
       title: "Osan MeetUp 2026 Summer",
       description: "7월 25일 토요일 오후 1시 · 오산청년일자리지원센터 이루잡",
       type: "website",
-      images: [{ url: `${siteUrl}/og-pink-crows.png`, width: 1731, height: 909, alt: "핑크 배경의 오산 까마귀 캐릭터와 Osan MeetUp 2026 행사 정보" }],
+      images: [{ url: `${siteUrl}/og-pink-hanbok.png`, width: 1731, height: 909, alt: "핑크 배경에서 전통 한복을 입은 오산 까마귀 캐릭터와 Osan MeetUp 2026 행사 정보" }],
     },
-    twitter: { card: "summary_large_image", images: [`${siteUrl}/og-pink-crows.png`] },
+    twitter: { card: "summary_large_image", images: [`${siteUrl}/og-pink-hanbok.png`] },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
