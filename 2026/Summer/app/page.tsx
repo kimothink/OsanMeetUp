@@ -131,7 +131,7 @@ export default function Home() {
             <img src={`${basePath}/event/osan-mascots.png`} alt="오산시 캐릭터 까산이와 까오" />
             <figcaption>오산에서 만나요!</figcaption>
           </figure>
-          <a className="primary-cta" href="#schedule">오늘의 여정 보기 <span>↓</span></a>
+          <a className="primary-cta" href="#schedule">행사 일정 보기 <span>↓</span></a>
         </div>
         <div className="ticker" aria-hidden="true"><div>AI · DATA · CLICKHOUSE · COMFYUI · SIDE PROJECT · STARTUP · AI · DATA · CLICKHOUSE · COMFYUI · SIDE PROJECT · STARTUP ·</div></div>
       </section>
@@ -183,6 +183,11 @@ export default function Home() {
           <div className="location-copy">
             <p>WHERE WE MEET</p><h2>오산청년일자리<br />지원센터 <i>이루잡</i></h2><address>경기도 오산시 운천로 62, 3층</address>
             <div className="parking-note"><strong>주차 안내</strong><p>오산시청 주차장은 무료로 이용할 수 있습니다. 시청 주차가 어려운 경우 운암공영주차장을 유료로 이용해 주세요.</p></div>
+            <div className="membership-note">
+              <strong>방문 전 확인해 주세요</strong>
+              <p>원활한 운영을 위해 방문 전 참여자 전원 미리 이루잡 멤버십 가입 확인 부탁드립니다.</p>
+              <a href="https://docs.google.com/forms/d/1oBHn2v6rKIDiwf0QisWw3qwD8nsuZ56ja68hWtotohQ/edit" target="_blank" rel="noreferrer">이루잡 멤버십 등록하기 ↗</a>
+            </div>
             <a href="https://naver.me/xZVpbYbg" target="_blank" rel="noreferrer">네이버 지도에서 보기 <span>↗</span></a>
           </div>
           <a className="map-image" href="https://naver.me/xZVpbYbg" target="_blank" rel="noreferrer">
