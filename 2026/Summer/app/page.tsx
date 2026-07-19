@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-type SponsorKey = "teut" | "automo" | "infragistics";
+type SponsorKey = "teut" | "automo" | "infragistics" | "recommend" | "jpub";
 
 const schedule = [
   { time: "13:00 — 13:10", kind: "OPENING", title: "오리엔테이션", speaker: "함께 여는 Osan MeetUp" },
@@ -19,7 +19,7 @@ const schedule = [
   { time: "17:30 — 17:40", kind: "LUCKY DRAW", title: "경품 추첨", speaker: "행운의 주인공은 누구?" },
 ];
 
-const sponsorDetails: Record<SponsorKey, { title: string; url: string; content: React.ReactNode }> = {
+const sponsorDetails: Record<SponsorKey, { title: string; url: string; image?: string; imageAlt?: string; content: React.ReactNode }> = {
   teut: {
     title: "티웃 · 차 마시는 이웃",
     url: "https://smartstore.naver.com/t-eut",
@@ -61,14 +61,37 @@ const sponsorDetails: Record<SponsorKey, { title: string; url: string; content: 
       <a href="https://www.infragistics.co.kr/" target="_blank" rel="noreferrer">Infragistics 홈페이지 ↗</a>
     </>,
   },
+  recommend: {
+    title: "리코멘드 출판사",
+    url: "https://www.rdbook.co.kr/",
+    image: "/event/recommend-books.png",
+    imageAlt: "리코멘드 출판사 후원 도서 네 권",
+    content: <>
+      <p>이번 행사에 오셔서 리코멘드 책을 받으신 분은 책을 읽으신 뒤 SNS 또는 온라인 서점에 리뷰를 남겨주시면 감사하겠습니다.</p>
+      <a href="https://www.instagram.com/recommendbookkr/" target="_blank" rel="noreferrer">리코멘드 인스타그램 보기 ↗</a>
+      <a href="https://www.rdbook.co.kr/" target="_blank" rel="noreferrer">리코멘드 홈페이지 보기 ↗</a>
+    </>,
+  },
+  jpub: {
+    title: "제이펍 출판사",
+    url: "http://jpub.tistory.com/",
+    image: "/event/jpub-books.png",
+    imageAlt: "제이펍 AI 개발자 생존 및 성장 가이드 도서",
+    content: <>
+      <p>제이펍은 ‘0과 1이 꿈꾸는 세상’이라는 캐치프레이즈 아래 2009년 4월 《서버/인프라를 지탱하는 기술》을 첫 책으로 시작해 현재까지 IT 업계 종사자와 관련학과 학생들을 위한 전문서적을 수백 종 출간해 왔습니다. 대한민국학술원과 문화체육관광부 선정 우수도서에 매년 이름을 올리며 신뢰받는 IT 전문 출판사로서의 입지를 확고히 다지고 있습니다.</p>
+      <p>전문서 출간으로 쌓은 노하우를 바탕으로 2019년 《업무와 일상을 정리하는 새로운 방법 Notion》을 시작으로 일반인을 위한 컴퓨터 활용서 분야로 영역을 확장했습니다. 《진짜 쓰는 실무 엑셀》, 《진짜 쓰는 프리미어 프로》 등은 오랜 기간 베스트셀러로 자리 잡아 IT 전문가뿐 아니라 일반 독자에게도 큰 사랑을 받고 있습니다.</p>
+      <p>또한 《디자인, 이렇게 하면 되나요》, 《마음까지 물들이는 어반 수채화 컬러링 북》 등 디자인·취미 분야로도 출판 영역을 넓혀 더욱 풍성한 독서 경험을 제공하고 있습니다. 2022년에는 ‘파란의자’, ‘머메이드’, ‘C612’, ‘여림재’ 브랜드를 신설해 능력 있는 외부 출판 기획자들과의 협력을 통해 다양한 콘텐츠를 선보이고 있습니다.</p>
+      <a href="http://jpub.tistory.com/" target="_blank" rel="noreferrer">제이펍 홈페이지 보기 ↗</a>
+    </>,
+  },
 };
 
 const sponsors = [
   { key: "teut" as SponsorKey, name: "티웃", image: "/sponsors/teut.png", detail: true },
   { key: "automo" as SponsorKey, name: "AUTOMO 안전연구소", image: "/sponsors/automo.png", detail: true },
   { key: "infragistics" as SponsorKey, name: "Infragistics", image: "/sponsors/infragistics.png", detail: true },
-  { name: "제이펍", image: "/sponsors/jpub.png", url: "http://jpub.tistory.com/" },
-  { name: "리코멘드", image: "/sponsors/recommend.png", url: "https://www.rdbook.co.kr/" },
+  { key: "jpub" as SponsorKey, name: "제이펍", image: "/sponsors/jpub.png", detail: true },
+  { key: "recommend" as SponsorKey, name: "리코멘드", image: "/sponsors/recommend.png", detail: true },
   { name: "이지스퍼블리싱", image: "/sponsors/easyspub.png", url: "https://www.easyspub.co.kr/" },
   { name: "한빛미디어", image: "/sponsors/hanbit.png", url: "https://www.hanbit.co.kr/" },
 ];
@@ -174,6 +197,7 @@ export default function Home() {
         {detail && <div className="dialog-panel">
           <button className="dialog-close" onClick={() => setSelected(null)} aria-label="닫기">×</button>
           <p className="dialog-kicker">SPONSOR STORY</p><h2>{detail.title}</h2>
+          {detail.image && <img className="dialog-hero-image" src={`${basePath}${detail.image}`} alt={detail.imageAlt ?? ""} />}
           <div className="dialog-content">{detail.content}</div>
         </div>}
       </dialog>
