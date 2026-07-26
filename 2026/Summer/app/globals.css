@@ -61,6 +61,15 @@ button { font:inherit; }
 .schedule-time small { display:block; margin-top:7px; color:var(--pink-deep); font-size:.58rem; letter-spacing:.12em; }
 .schedule-copy h3 { margin:0; font-size:clamp(1.08rem,2.2vw,1.6rem); font-weight:600; letter-spacing:-.02em; line-height:1.45; }
 .schedule-copy p { margin:8px 0 0; color:#735f67; font-size:.85rem; font-weight:400; }
+.schedule-title-row { display:flex; align-items:flex-start; justify-content:space-between; gap:22px; }
+.session-resources { display:flex; flex:0 0 auto; flex-wrap:wrap; gap:8px; padding-top:2px; }
+.resource-link { display:inline-flex; min-height:36px; align-items:center; gap:7px; padding:5px 10px 5px 6px; border:1px solid var(--ink); border-radius:999px; background:#fff; color:var(--ink); text-decoration:none; box-shadow:2px 2px 0 var(--ink); transition:transform .16s ease,box-shadow .16s ease; }
+.resource-link:hover { transform:translate(-1px,-1px); box-shadow:4px 4px 0 var(--ink); }
+.resource-link:focus-visible { outline:3px solid var(--pink-deep); outline-offset:3px; }
+.resource-link span { display:grid; min-width:25px; height:24px; place-items:center; border-radius:6px; font-size:.55rem; font-weight:900; letter-spacing:.02em; }
+.resource-link b { font-size:.7rem; font-weight:800; white-space:nowrap; }
+.pdf-link span { background:var(--pink-deep); color:#fff; }
+.youtube-link .youtube-mark { width:31px; background:#ff0033; color:#fff; border-radius:7px; font-size:.7rem; line-height:1; padding-left:1px; }
 .schedule-item.is-break { opacity:.62; }
 .schedule-item.is-break .schedule-copy h3 { font-family:"IBM Plex Sans KR","Noto Sans KR",sans-serif; font-style:italic; font-weight:400; }
 
@@ -143,6 +152,8 @@ footer a { font-weight:800; font-size:.8rem; }
   .schedule-section,.sponsors-section,.location-section { padding:78px 0; }
   .schedule-item { grid-template-columns:35px 1fr; gap:10px 12px; }
   .schedule-time,.schedule-copy { grid-column:2; }
+  .schedule-title-row { flex-direction:column; gap:12px; }
+  .session-resources { padding-top:0; }
   .schedule-item:hover { padding-left:0; padding-right:0; background:transparent; }
   .attendance-section { padding:0 0 78px; }
   .attendance-card { grid-template-columns:1fr; gap:12px; padding:28px; }

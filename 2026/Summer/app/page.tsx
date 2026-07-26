@@ -11,9 +11,23 @@ const schedule = [
   { time: "14:00 — 14:15", kind: "BREAK", title: "쉬는 시간", speaker: "차 한 잔과 함께" },
   { time: "14:15 — 14:55", kind: "SESSION 02", title: "이제 쿼리 돌리고 커피 못 탑니다: OLAP ClickHouse 도입기", speaker: "최윤진 님 · 40분" },
   { time: "14:55 — 15:10", kind: "BREAK", title: "쉬는 시간", speaker: "잠깐 숨을 고르고" },
-  { time: "15:10 — 15:50", kind: "SESSION 03", title: "ComfyUI 퇴사하고 응가메이트를 만들기까지", speaker: "이진 님 · 40분" },
+  {
+    time: "15:10 — 15:50",
+    kind: "SESSION 03",
+    title: "ComfyUI 퇴사하고 응가메이트를 만들기까지",
+    speaker: "이진 님 · 40분",
+    pdf: "/resources/comfyui-ungamate.pdf",
+    youtube: "https://youtu.be/eQnm7p7i408?si=lMDzZT0Dk1ST9CWv",
+  },
   { time: "15:50 — 16:05", kind: "BREAK", title: "쉬는 시간", speaker: "다음 이야기를 기다리며" },
-  { time: "16:05 — 16:45", kind: "SESSION 04", title: "유저 워크플로우 안에 있는 사이드 프로젝트, 어렵다 어려워", speaker: "홍성민 님 · 40분" },
+  {
+    time: "16:05 — 16:45",
+    kind: "SESSION 04",
+    title: "유저 워크플로우 안에 있는 사이드 프로젝트, 어렵다 어려워",
+    speaker: "홍성민 님 · 40분",
+    pdf: "/resources/side-project-workflow.pdf",
+    youtube: "https://youtu.be/LVaR_MHFE40?si=aKZ_VxFIZTswrvdQ",
+  },
   { time: "16:45 — 17:00", kind: "BREAK", title: "쉬는 시간", speaker: "마지막 세션 전 휴식" },
   { time: "17:00 — 17:30", kind: "SESSION 05", title: "덕질의 끝은 창업", speaker: "김희애 님 · 30분" },
   { time: "17:30 — 17:40", kind: "LUCKY DRAW", title: "경품 추첨", speaker: "행운의 주인공은 누구?" },
@@ -144,7 +158,40 @@ export default function Home() {
               <article className={`schedule-item ${item.kind === "BREAK" ? "is-break" : ""}`} key={item.time}>
                 <div className="schedule-index">{String(index + 1).padStart(2, "0")}</div>
                 <div className="schedule-time">{item.time}<small>{item.kind}</small></div>
-                <div className="schedule-copy"><h3>{item.title}</h3><p>{item.speaker}</p></div>
+                <div className="schedule-copy">
+                  <div className="schedule-title-row">
+                    <h3>{item.title}</h3>
+                    {(item.pdf || item.youtube) && (
+                      <div className="session-resources" aria-label={`${item.title} 발표 자료`}>
+                        {item.pdf && (
+                          <a
+                            className="resource-link pdf-link"
+                            href={`${basePath}${item.pdf}`}
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label={`${item.title} PDF 자료 열기`}
+                          >
+                            <span aria-hidden="true">PDF</span>
+                            <b>발표 자료</b>
+                          </a>
+                        )}
+                        {item.youtube && (
+                          <a
+                            className="resource-link youtube-link"
+                            href={item.youtube}
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label={`${item.title} YouTube 영상 열기`}
+                          >
+                            <span className="youtube-mark" aria-hidden="true">▶</span>
+                            <b>YouTube</b>
+                          </a>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                  <p>{item.speaker}</p>
+                </div>
               </article>
             ))}
           </div>
