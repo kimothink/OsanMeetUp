@@ -6,7 +6,13 @@ type SponsorKey = "teut" | "automo" | "infragistics" | "recommend" | "jpub";
 
 const schedule = [
   { time: "13:00 — 13:10", kind: "OPENING", title: "오리엔테이션", speaker: "함께 여는 Osan MeetUp" },
-  { time: "13:10 — 13:50", kind: "SESSION 01", title: "AI의 핵심은 컨텍스트: DataHub로 완성하는 AI-ready 데이터와 실무 적용", speaker: "권윤재 님 · 40분" },
+  {
+    time: "13:10 — 13:50",
+    kind: "SESSION 01",
+    title: "AI의 핵심은 컨텍스트: DataHub로 완성하는 AI-ready 데이터와 실무 적용",
+    speaker: "권윤재 님 · 40분",
+    pdf: "/resources/datahub-ai-ready.pdf",
+  },
   { time: "13:50 — 14:00", kind: "NETWORKING", title: "참가자 자기소개", speaker: "반갑게 인사해요" },
   { time: "14:00 — 14:15", kind: "BREAK", title: "쉬는 시간", speaker: "차 한 잔과 함께" },
   { time: "14:15 — 14:55", kind: "SESSION 02", title: "이제 쿼리 돌리고 커피 못 탑니다: OLAP ClickHouse 도입기", speaker: "최윤진 님 · 40분" },
