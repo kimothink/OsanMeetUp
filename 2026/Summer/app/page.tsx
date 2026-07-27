@@ -35,7 +35,13 @@ const schedule = [
     youtube: "https://youtu.be/LVaR_MHFE40?si=aKZ_VxFIZTswrvdQ",
   },
   { time: "16:45 — 17:00", kind: "BREAK", title: "쉬는 시간", speaker: "마지막 세션 전 휴식" },
-  { time: "17:00 — 17:30", kind: "SESSION 05", title: "덕질의 끝은 창업", speaker: "김희애 님 · 30분" },
+  {
+    time: "17:00 — 17:30",
+    kind: "SESSION 05",
+    title: "덕질의 끝은 창업",
+    speaker: "김희애 님 · 30분",
+    pdf: "/resources/fandom-to-startup.pdf",
+  },
   { time: "17:30 — 17:40", kind: "LUCKY DRAW", title: "경품 추첨", speaker: "행운의 주인공은 누구?" },
 ];
 
