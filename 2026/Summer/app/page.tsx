@@ -24,6 +24,9 @@ const schedule = [
     speaker: "이진 님 · 40분",
     pdf: "/resources/comfyui-ungamate.pdf",
     youtube: "https://youtu.be/eQnm7p7i408?si=lMDzZT0Dk1ST9CWv",
+    website: "https://poopiemate.com/",
+    android: "https://play.google.com/store/apps/details?id=com.pixelberry.poopiemate&hl=ko",
+    ios: "https://apps.apple.com/kr/app/%EC%9D%91%EA%B0%80%EB%A9%94%EC%9D%B4%ED%8A%B8/id6781981502",
   },
   { time: "15:50 — 16:05", kind: "BREAK", title: "쉬는 시간", speaker: "다음 이야기를 기다리며" },
   {
@@ -41,6 +44,7 @@ const schedule = [
     title: "덕질의 끝은 창업",
     speaker: "김희애 님 · 30분",
     pdf: "/resources/fandom-to-startup.pdf",
+    website: "https://smartstore.naver.com/t-eut",
   },
   { time: "17:30 — 17:40", kind: "LUCKY DRAW", title: "경품 추첨", speaker: "행운의 주인공은 누구?" },
 ];
@@ -173,7 +177,7 @@ export default function Home() {
                 <div className="schedule-copy">
                   <div className="schedule-title-row">
                     <h3>{item.title}</h3>
-                    {(item.pdf || item.youtube) && (
+                    {(item.pdf || item.youtube || item.website || item.android || item.ios) && (
                       <div className="session-resources" aria-label={`${item.title} 발표 자료`}>
                         {item.pdf && (
                           <a
@@ -197,6 +201,42 @@ export default function Home() {
                           >
                             <span className="youtube-mark" aria-hidden="true">▶</span>
                             <b>YouTube</b>
+                          </a>
+                        )}
+                        {item.website && (
+                          <a
+                            className="resource-link website-link"
+                            href={item.website}
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label={`${item.title} 홈페이지 열기`}
+                          >
+                            <span className="website-mark" aria-hidden="true">WWW</span>
+                            <b>홈페이지</b>
+                          </a>
+                        )}
+                        {item.android && (
+                          <a
+                            className="resource-link android-link"
+                            href={item.android}
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label={`${item.title} Android 앱 열기`}
+                          >
+                            <span className="android-mark" aria-hidden="true"><i /></span>
+                            <b>Android</b>
+                          </a>
+                        )}
+                        {item.ios && (
+                          <a
+                            className="resource-link ios-link"
+                            href={item.ios}
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label={`${item.title} iOS 앱 열기`}
+                          >
+                            <span className="ios-mark" aria-hidden="true">iOS</span>
+                            <b>App Store</b>
                           </a>
                         )}
                       </div>

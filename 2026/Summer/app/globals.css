@@ -70,6 +70,12 @@ button { font:inherit; }
 .resource-link b { font-size:.7rem; font-weight:800; white-space:nowrap; }
 .pdf-link span { background:var(--pink-deep); color:#fff; }
 .youtube-link .youtube-mark { width:31px; background:#ff0033; color:#fff; border-radius:7px; font-size:.7rem; line-height:1; padding-left:1px; }
+.website-link .website-mark { width:31px; background:#20161a; color:#fff; font-size:.48rem; letter-spacing:.04em; }
+.android-link .android-mark { position:relative; width:31px; background:#3ddc84; }
+.android-mark i { position:relative; display:block; width:15px; height:10px; border-radius:7px 7px 3px 3px; background:#143126; }
+.android-mark i::before { content:""; position:absolute; top:-4px; left:2px; width:1px; height:5px; background:#143126; transform:rotate(-30deg); box-shadow:9px 5px 0 #143126; }
+.android-mark i::after { content:""; position:absolute; top:4px; left:4px; width:2px; height:2px; border-radius:50%; background:#fff; box-shadow:5px 0 0 #fff; }
+.ios-link .ios-mark { width:31px; background:#111; color:#fff; font-size:.52rem; letter-spacing:-.01em; }
 .schedule-item.is-break { opacity:.62; }
 .schedule-item.is-break .schedule-copy h3 { font-family:"IBM Plex Sans KR","Noto Sans KR",sans-serif; font-style:italic; font-weight:400; }
 
