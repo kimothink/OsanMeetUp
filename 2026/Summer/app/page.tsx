@@ -12,6 +12,7 @@ const schedule = [
     title: "AI의 핵심은 컨텍스트: DataHub로 완성하는 AI-ready 데이터와 실무 적용",
     speaker: "권윤재 님 · 40분",
     pdf: "/resources/datahub-ai-ready.pdf",
+    youtube: "https://youtu.be/6eQ241-VBN4?si=N3go5Yq-7CgJZGQB",
   },
   { time: "13:50 — 14:00", kind: "NETWORKING", title: "참가자 자기소개", speaker: "반갑게 인사해요" },
   { time: "14:00 — 14:15", kind: "BREAK", title: "쉬는 시간", speaker: "차 한 잔과 함께" },
