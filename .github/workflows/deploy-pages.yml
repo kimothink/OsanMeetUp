@@ -38,7 +38,10 @@ jobs:
         run: |
           mkdir -p _site/2026/Summer
           cp -R 2026/Summer/out/. _site/2026/Summer/
-          printf '<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=2026/Summer/"><title>Osan MeetUp</title><a href="2026/Summer/">Osan MeetUp 2026 Summer</a>' > _site/index.html
+          mkdir -p _site/2026/Winter
+          cp -R 2026/Winter/. _site/2026/Winter/
+          touch _site/.nojekyll
+          printf '<!doctype html><html lang="ko"><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=2026/Winter/"><title>경기남부 개발자 모임</title><a href="2026/Winter/">경기남부 개발자 모임 2026 Winter</a></html>' > _site/index.html
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
