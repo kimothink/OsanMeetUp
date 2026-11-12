@@ -41,7 +41,7 @@ jobs:
           mkdir -p _site/2026/Winter
           cp -R 2026/Winter/. _site/2026/Winter/
           touch _site/.nojekyll
-          printf '<!doctype html><html lang="ko"><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=2026/Winter/"><title>경기남부 개발자 모임</title><a href="2026/Winter/">경기남부 개발자 모임 2026 Winter</a></html>' > _site/index.html
+          printf '<!doctype html><html lang="ko"><meta charset="utf-8"><meta property="og:title" content="경기남부 개발자 모임 · 2026 Winter"><meta property="og:description" content="11월 21일 토요일 오후 1시 · 돈부남아카데미"><meta property="og:type" content="website"><meta property="og:image" content="https://kimothink.github.io/OsanMeetUp/2026/Winter/assets/koriyo-family.png"><meta property="og:image:width" content="600"><meta property="og:image:height" content="518"><meta property="og:image:alt" content="화성시 캐릭터 코리요 가족"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://kimothink.github.io/OsanMeetUp/2026/Winter/assets/koriyo-family.png"><meta http-equiv="refresh" content="0;url=2026/Winter/"><title>경기남부 개발자 모임</title><a href="2026/Winter/">경기남부 개발자 모임 2026 Winter</a></html>' > _site/index.html
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
