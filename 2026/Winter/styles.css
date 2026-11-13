@@ -19,6 +19,7 @@
   width: 112px;
   height: auto;
   border-radius: 6px;
+  mix-blend-mode: multiply;
 }
 
 .video-jump{display:inline-block;margin-top:6px;font-size:12px;font-weight:700;color:var(--orange);text-decoration:underline;text-underline-offset:4px}
