@@ -147,7 +147,7 @@ export default function Home() {
       <section className="hero" id="top">
         <nav className="nav shell" aria-label="주요 메뉴">
           <a className="brand" href="#top"><span>OSAN</span> MEETUP</a>
-          <div className="nav-links"><a href="#schedule">일정</a><a href="#sponsors">후원사</a><a href="#location">장소</a></div>
+          <div className="nav-links"><a href="#schedule">일정</a><a href="#videos">발표 영상</a><a href="#sponsors">후원사</a><a href="#location">장소</a></div>
         </nav>
         <div className="hero-orb orb-one" /><div className="hero-orb orb-two" />
         <div className="shell hero-content">
@@ -245,6 +245,22 @@ export default function Home() {
                   </div>
                   <p>{item.speaker}</p>
                 </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="videos-section" id="videos" aria-labelledby="videos-title">
+        <div className="shell">
+          <div className="videos-heading"><p>2026 SUMMER · SESSION VIDEOS</p><h2 id="videos-title">여름의 이야기를 다시 만나요.</h2><span>2026년 여름 행사에서 촬영한 발표 영상입니다.</span></div>
+          <div className="videos-grid">
+            {schedule.map((item) => item.youtube && (
+              <article className="video-card" key={item.youtube}>
+                <div className="video-player">
+                  <iframe src={`https://www.youtube-nocookie.com/embed/${new URL(item.youtube).pathname.slice(1)}`} title={`${item.title} 발표 영상`} loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+                </div>
+                <div className="video-copy"><p>{item.speaker}</p><h3>{item.title}</h3><a href={item.youtube} target="_blank" rel="noreferrer">YouTube에서 보기 ↗</a></div>
               </article>
             ))}
           </div>
