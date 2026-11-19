@@ -75,3 +75,5 @@
 .schedule-list li.schedule-break{background:#e1e9d9;color:#28492f;padding-left:16px;padding-right:16px;border-left:4px solid #668765}.schedule-break .schedule-time{color:#28492f}
 
 .speaker-link{color:var(--orange);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+
+.support-heading{display:flex;align-items:center;flex-wrap:wrap;gap:16px 20px}.support-heading .button{padding:12px 16px}
